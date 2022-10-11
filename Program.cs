@@ -1,4 +1,7 @@
-﻿namespace CSharpForUniversity
+﻿
+using System.Text;
+
+namespace CSharpForUniversity
 {
     internal class Program
     {
@@ -9,10 +12,19 @@
         обчислення скалярного твору двох векторів, довжини вектора, косинуса кута між векторами.
         Написати програму, що демонструє всі розроблені елементи класу
         */
+
         static void Main(string[] args)
         {
-            var vector = new Vector3D(3, 4, 5);
-            Console.WriteLine(vector);
+            Console.OutputEncoding = Encoding.Unicode;
+            Random random = new Random();
+            var vector1 = new Vector3D(random.Next(-10,10), random.Next(-10, 10), random.Next(-10, 10));
+            var vector2 = new Vector3D(random.Next(-10, 10), random.Next(-10, 10), random.Next(-10, 10));
+            Console.WriteLine($"Перший вектор = {vector1}\t Другий вектор = {vector2}\n");
+            Console.WriteLine($"Сума векторів: {vector1} + {vector2} = {vector1+vector2}");
+            Console.WriteLine($"Різність векторів: {vector1} - {vector2} = {vector1 - vector2}");
+            Console.WriteLine($"Скалярний добуток векторів: {vector1} * {vector2} = {vector1 * vector2}");
+            Console.WriteLine($"Довжини векторів: {vector1} = {vector1.Length()} : {vector2} = {vector2.Length()}");
+            Console.WriteLine($"Косинуса кута між векторами: {vector1} ^ {vector2} = {vector1 ^ vector2}");
         }
     }
 }
