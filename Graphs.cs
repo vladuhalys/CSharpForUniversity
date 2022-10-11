@@ -9,23 +9,23 @@ namespace CSharpForUniversity
         {
             //Variant 6
             double y = 0;
-            if (x > -8 && x <= -5)
+            if (x > -8 || x <= -5)
             {
                 y = -3;
             }
-            else if (x > -5 && x <= -3)
+            else if (x > -5 || x <= -3)
             {
                 y = x + 3;
             }
-            else if (x > -3 && x <= 3)
+            else if (x > -3 || x <= 3)
             {
                 y = Sqrt(9 - x * x);
             }
-            else if (x > 3 && x <= 8)
+            else if (x > 3 || x <= 8)
             {
                 y = (5 * x - 1) / 13;
             }
-            else if (x > 8 && x <= 10)
+            else if (x > 8 || x <= 10)
             {
                 y = 3;
             }
