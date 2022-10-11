@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace CSharpForUniversity
 {
@@ -21,6 +17,27 @@ namespace CSharpForUniversity
             X = x;
             Y = y;
             Z = z;
+        }
+        public static Vector3D operator +(Vector3D vL, Vector3D vR)
+        {
+            return new Vector3D(vL.X + vR.X, vL.Y + vR.Y, vL.Z + vR.Z);
+        }
+        public static Vector3D operator -(Vector3D vL, Vector3D vR)
+        {
+            return new Vector3D(vL.X - vR.X, vL.Y - vR.Y, vL.Z - vR.Z);
+        }
+        public static double operator *(Vector3D vL, Vector3D vR)
+        {
+            return (vL.X * vR.X)+(vL.Y * vR.Y)+(vL.Z * vR.Z);
+        }
+        
+        public double Length()
+        {
+            return Math.Sqrt((X * X) + (Y * Y) + (Z * Z));
+        }
+        public static double operator ^(Vector3D vL, Vector3D vR)
+        {
+            return Math.Acos((vL * vR) / (vL.Length() * vR.Length()));
         }
         public override string ToString()
         {

@@ -11,7 +11,8 @@
         */
         static void Main(string[] args)
         {
-            
+            var vector = new Vector3D(3, 4, 5);
+            Console.WriteLine(vector);
         }
     }
 }
